@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
-// import './App.css';
+import './App.css';
 import { Button, 
         Nav,
         Navbar,
@@ -53,42 +52,49 @@ class App extends Component {
           </Collapse>
         </Navbar>
 
-        <Card>
-          <CardHeader>Basic Information</CardHeader>
-          <CardBody>
-            
-          </CardBody>          
-        </Card>
         <Form>
-          <FormGroup>
-            <Label for="name">Name</Label>
-            <Input type="text" name="name" id="name" placeholder="Name" />
-          </FormGroup>
-          <FormGroup>
-            <Label for="phone-number">Phone Number</Label>
-            <Input type="text" name="phone-number" id="phone-number" placeholder="Phone number" />
-          </FormGroup>
-          <FormGroup>
-            <Label for="email">Email</Label>
-            <Input type="email" name="email" id="email" placeholder="Email" />
-          </FormGroup>
-        </Form>
+          <Card>
+            <CardHeader>Basic Information</CardHeader>
+            <CardBody>
+              
+                <FormGroup>
+                  <Label for="name" className="App-label">Name</Label>
+                  <Input type="text" name="name" id="name" placeholder="Name" />
+                </FormGroup>
+                <FormGroup>
+                  <Label for="phone-number">Phone Number</Label>
+                  <Input type="text" name="phone-number" id="phone-number" placeholder="Phone number" />
+                </FormGroup>                
+                <FormGroup>
+                  <Label for="email">Email</Label>
+                  <Input type="email" name="email" id="email" placeholder="Email" />
+                </FormGroup>                   
+            </CardBody>     
+          </Card>
 
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <Button color="danger">Danger!</Button>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
+          <Card>
+            <CardHeader>Location</CardHeader>
+            <CardBody>            
+                <FormGroup>
+                  <Label for="city" className="App-label">City</Label>
+                  <Input type="text" name="city" id="city" placeholder="Search places" />
+                </FormGroup>                    
+            </CardBody>     
+          </Card>     
+
+          <Card>
+            <CardBody className="tos">            
+              <FormGroup check>
+                <Label check>
+                  <Input type="checkbox" name="tos" id="tos"/>
+                  I accept the terms of service
+                </Label>
+              </FormGroup>
+            </CardBody>
+
+          </Card>
+
+        </Form>        
       </div>
     );
   }
